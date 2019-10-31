@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+#box {
+    width:420px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+#button{
+    width:96px;
+    padding:20px 10px 20px 10px;
+    margin:3px 0px 3px 0px;
+}
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+    var str = "";
+    function input_Click(a) {        
+        str = str + a;
+        document.getElementById("result").value = str;             
+    }
+    
+    function input_Cal(){
+        
+        document.getElementById("result").value = eval(str);
+    }
+    
+    function input_Ce(){
+        str = "";
+        document.getElementById("result").value = null;
+    }
+    
+</script>
+</head>
+<body>
+    <input id="result" style="text-align: right; width:398px" type="text" value="0.0"/>
+    <div id="box">
+        <input type="button" id="button" value = "7" onclick="input_Click('7')"/>
+        <input type="button" id="button" value = "8" onclick="input_Click('8')"/>
+        <input type="button" id="button" value = "9" onclick="input_Click('9')"/>
+        <input type="button" id="button" value = "+" onclick="input_Click('+')"/>
+        <input type="button" id="button" value = "4" onclick="input_Click('4')"/>
+        <input type="button" id="button" value = "5" onclick="input_Click('5')"/>
+        <input type="button" id="button" value = "6" onclick="input_Click('6')"/>
+        <input type="button" id="button" value = "-" onclick="input_Click('-')"/>
+        <input type="button" id="button" value = "1" onclick="input_Click('1')"/>
+        <input type="button" id="button" value = "2" onclick="input_Click('2')"/>
+        <input type="button" id="button" value = "3" onclick="input_Click('3')"/>
+        <input type="button" id="button" value = "" onclick="input_Click('')"/>
+        <input type="button" id="button" value = "0" onclick="input_Click('0')"/>
+        <input type="button" id="button" value = "CE" onclick="input_Ce()"/>
+        <input type="button" id="button" value = "=" onclick="input_Cal()"/>
+        <input type="button" id="button" value = "/" onclick="input_Click('/')"/>        
+        
+    </div>
+    <h1>결 과 이 력</h1>
+    <div id="resultlist">
+    
+    
+    </div>
+    
+</body>
+</html>

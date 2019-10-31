@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>영화 예매</title>
+<script type='text/javascript' src='js/jquery-3.3.1.js'></script>
+<script type="text/javascript">
+    var str = "";
+    $(document).ready(function() {
+        $("#jojo").change(function() {
+            if ($("#jojo").is(":checked")) {
+                checked_jojo();
+            }
+        });
+        $("#njojo").change(function() {
+            if ($("#njojo").is(":checked")) {
+                unchecked_jojo();
+            }
+        });
+        $("#option").change(function() {
+            if ($("#option").is(":checked")) {
+                $("#hidden").css("display","block");
+            }else{
+                $("#hidden").css("display","none");
+            }
+        });
+    });    
+    function checked_jojo() {
+        str = document.getElementById("priceLable").innerHTML;
+        document.getElementById("priceLable").innerHTML = "<del>" + str
+                + "</del>" + "<ins>W5,000</ins>";
+    }
+    function unchecked_jojo() {    
+        if(document.getElementById("priceLable").innerHTML=='W9,000'){
+            
+        }else{
+        document.getElementById("priceLable").innerHTML = "W9,000";
+        }
+        
+    }
+</script>
+</head>
+<body>
+    <header>
+        <hgroup>
+            <h1>영화 예매</h1>
+            <h2>쿵푸팬더</h2>
+        </hgroup>
+    </header>
+    <article id="reservation">
+        <section>
+            <img id="poster" alt="쿵푸팬더 poster" src="./img/movie_image2.jpg">
+        </section>
+        <section>
+            <form>
+                <fieldset id="wrapperFieldset">
+                    <legend id="wrapperLegend">예매정보 입력</legend>
+                    <label>상영관</label> <select>
+                        <option>CGV</option>
+                        <option>롯데시네마</option>
+                        <option>메가박스</option>
+                        <option>프리머스</option>
+                        <option>다른극장</option>
+                    </select> <label>날 &nbsp;짜</label><input type="date" /><br />
+                    <fieldset class="innerFiledSet">
+                        <legend>시간</legend>
+                        <input type="radio" name="time" id="jojo" value="08:30" /><label>08:30</label>
+                        <input type="radio" name="time" id="njojo" value="11:00" /><label>11:00</label>
+                        <input type="radio" name="time" id="njojo" value="14:20" /><label>14:20</label>
+                        <input type="radio" name="time" id="njojo" value="17:25" /><label>17:25</label>
+                        <input type="radio" name="time" id="njojo" value="20:10" /><label>20:10</label>
+                        <input type="radio" name="time" id="njojo" value="23:05" /><label>23:05</label>
+                    </fieldset>
+                    <p />
+                    <label>요&nbsp;금</label><span id="priceLable">W9,000</span>
+                    <p />
+                    <label>인&nbsp;원</label><input type="number" required="required"
+                        min="1" id='person' value='0' style="text-align: right;" />
+                    <p />
+                    <label>금&nbsp;액</label><input type="number" readonly="readonly"
+                        id='price' value='0' style="text-align: right;" />
+                    <fieldset class="innerFiledSet">
+                        <input type="checkbox" id="option"/><label>옵션</label>
+                        <fieldset class="innerFiledSet" id="hidden" style="display:none;">
+                            <input type="checkbox" name="popcorn" value="5000" /><label>팝콘
+                                W5,000</label> <input type="checkbox" name="cola" value="2000" /><label>음료
+                                W2,000</label><br> <input type="reset" id="reset" value="취소"> <input
+                                type="submit" id="submit" value="예매">
+                        </fieldset>
+                    </fieldset>
+            </form>
+        </section>
+    </article>
+</body>
+</html>

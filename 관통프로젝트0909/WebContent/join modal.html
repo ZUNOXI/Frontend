@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>Hello, world!</title>
+  <script src="//code.jquery.com/jquery.min.js"></script>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/latest/js/bootstrap.min.js"></script>
+  <style>
+    /* .navbar-nav {
+      flex-direction: row;
+    }
+    
+    .nav-link {
+      padding-right: .5rem !important;
+      padding-left: .5rem !important;
+    }
+    
+    /* Fixes dropdown menus placed on the right side */
+    .ml-auto .dropdown-menu {
+      left: auto !important;
+      right: 0px;
+    } */
+    
+    #test_btn1{
+            margin-right:0px;
+    }
+    #test_btn2{
+        margin-left:-2px;
+    }
+    #test_btn2,#test_btn1 {
+            border: 1px solid gray;
+            background-color: rgba(0,0,0,0);
+            color: white;
+            padding: 5px;
+        }
+        
+    #test_btn3,#test_btn4 {
+            background-color: rgba(0,0,0,0);
+            color: black;
+            padding: 5px;
+        }
+    .the-legend {
+	    border-style: none;
+	    border-width: 0;
+	    font-size: 14px;
+	    line-height: 20px;
+	    margin-bottom: 0;
+	    width: auto;
+	    padding: 0 10px;
+	    border: 1px solid #e0e0e0;
+	}
+	.the-fieldset {
+	    border: 1px solid #e0e0e0;
+	    padding: 10px;
+	}    
+        
+    legend.scheduler-border {
+    width:inherit; /* Or auto */
+    padding:0 10px; /* To give a bit of padding on the left and right */
+    border-bottom:none;
+	}    
+	
+	body>div>div>div>ul ul { /*서브메뉴 선택시 서브메뉴화면  */
+	display: none;
+	background: white;
+	box-shadow: 1px 1px 5px black;
+	}
+	
+	#test_btn2:hover ul {
+	display: block;
+	position: relative;
+	}
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
+  <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+      <ul class="navbar-nav text-right">
+         <li><a href="#"><button id ="test_btn1" style="cursor:pointer"><img src = "img/user.png"> Sign up</button></a></li>
+         <li><a href="#"><button id ="test_btn2" style="cursor:pointer"><img src = "img/unlocked.png"> Login</button></a>
+         </li>
+      </ul>
+  </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="navbar-brand" href="#"><img alt="ssafy" src="./img/header-logo.jpg"></a>
+<div class="collapse navbar-collapse " id="navbar-collapse-1">
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="#">공지사항</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">상품정보</a>
+    </li>
+   <li class="nav-item">
+      <a class="nav-link" href="#">베스트 섭취 정보</a>
+    </li>
+  </ul>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" >Search</button>
+  </form>
+</div>
+</nav>
+
+<!-- 
+<nav class="navbar navbar-expand-sm bg-gray navbar-gray ">
+  <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+      <ul class="navbar-nav text-left">
+      <img src = "img/icon.png">
+         <li><a href="#">Home </a></li>
+         <li>> </li>
+         <li><a href="#"> 회원가입</a>
+         </li>
+      </ul>
+  </div>
+</nav> -->
+
+
+<div class="jumbotron">
+<div style = 'margin-left : 20px;'><img src = "img/icon.png">  Home > 회원가입</div>
+</div>
+
+</div>	
+	<div id="register" class="bg-dark">
+	<div class="container" style="width:100%;padding-top:10px;border-radius: 22px 22px;" >
+<article class="container bg-light" style="max-width:840px;border-radius: 10px 10px;">
+            <div class="page-header">
+                <div class="col-md-6 col-md-offset-3">
+                <br>
+                <h3>회원가입</h3>
+                </div>
+            </div>
+            <div class="form-group has-feedback row">
+						<label for="inputName"
+							class="col-md-3 control-label text-md-right col-form-label">아이디
+							<span class="text-danger small">*</span>
+						</label>
+						<div class="col-md-8">
+							<input type="text" class="form-control" id="inputName"
+								placeholder="" required name="id"> <i
+								class="fa fa-pencil form-control-feedback pr-4"></i>
+						</div>
+					</div>
+					<div class="form-group has-feedback row">
+						<label for="inputLastName"
+							class="col-md-3 control-label text-md-right col-form-label">비밀번호
+							<span class="text-danger small">*</span>
+						</label>
+						<div class="col-md-8">
+							<input type="text" class="form-control" id="inputLastName"
+								placeholder="영문 숫자 포함 6자리 이상" required name="pw">
+							<i class="fa fa-pencil form-control-feedback pr-4"></i>
+						</div>
+					</div>
+					<div class="form-group has-feedback row">
+						<label for="inputUserName"
+							class="col-md-3 control-label text-md-right col-form-label">이름
+							<span class="text-danger small">*</span>
+						</label>
+						<div class="col-md-8">
+							<input type="text" class="form-control" id="inputUserName"
+								placeholder="User Name" required name="name"> <i
+								class="fa fa-user form-control-feedback pr-4"></i>
+						</div>
+					</div>
+					<div class="form-group has-feedback row">
+						<label for="inputEmail"
+							class="col-md-3 control-label text-md-right col-form-label">주소
+							<span class="text-danger small">*</span>
+						</label>
+						<div class="col-md-8">
+							<input type="text" class="form-control" id="inputEmail"
+								placeholder="address" required name="addr"> <i
+								class="fa fa-envelope form-control-feedback pr-4"></i>
+						</div>
+					</div>
+                   <div class="form-group has-feedback row">
+						<label for="inputPassword"
+							class="col-md-3 control-label text-md-right col-form-label">전화번호
+							<span class="text-danger small">*</span>
+						</label>
+						<div class="col-md-8">
+							<input type="text" class="form-control" id="inputPassword"
+								placeholder="010-xxx-xxxx" required name="tel"> <i
+								class="fa fa-lock form-control-feedback pr-4"></i>
+						</div>
+					</div>
+                   <div class="form-group has-feedback row">
+						<label for="inputPassword"
+							class="col-md-3 control-label text-md-right col-form-label">알레르기
+							<span class="text-danger small">*</span>
+						</label>
+							<div class="col-md-8">
+								<fieldset class="the-fieldset">
+									<legend class="the-legend"> Check</legend>
+									<div class="row">
+										<div class="col-sm-10">
+											<div class="form-check form-check-inline">
+												<input name="allergy" class="form-check-input"
+													id='inlineCheckbox2' type="checkbox" value="대두"> <label
+													class="form-check-label">대두 </label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input name="allergy" class="form-check-input"
+													id='inlineCheckbox2' type="checkbox" value="땅콩"> <label
+													class="form-check-label">땅콩 </label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input name="allergy" class="form-check-input"
+													id='inlineCheckbox2' type="checkbox" value="우유"> <label
+													class="form-check-label">우유 </label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input name="allergy" class="form-check-input"
+													id='inlineCheckbox2' type="checkbox" value="게"> <label
+													class="form-check-label">게</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input name="allergy" class="form-check-input"
+													id='inlineCheckbox2' type="checkbox" value="새우"> <label
+													class="form-check-label">새우</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input name="allergy" class="form-check-input"
+													id='inlineCheckbox2' type="checkbox" value="참치"> <label
+													class="form-check-label">참치</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input name="allergy" class="form-check-input"
+													id='inlineCheckbox2' type="checkbox" value="연어"> <label
+													class="form-check-label">연어</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input name="allergy" class="form-check-input"
+													id='inlineCheckbox2' type="checkbox" value="쑥"> <label
+													class="form-check-label">쑥 </label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input name="allergy" class="form-check-input"
+													id='inlineCheckbox2' type="checkbox" value="소고기"> <label
+													class="form-check-label">소고기</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input name="allergy" class="form-check-input"
+													id='inlineCheckbox2' type="checkbox" value="닭고기"> <label
+													class="form-check-label">닭고기 </label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input name="allergy" class="form-check-input"
+													id='inlineCheckbox2' type="checkbox" value="돼지고기"> <label
+													class="form-check-label">돼지고기</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input name="allergy" class="form-check-input"
+													id='inlineCheckbox2' type="checkbox" value="복숭아"> <label
+													class="form-check-label">복숭아 </label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input name="allergy" class="form-check-input"
+													id='inlineCheckbox2' type="checkbox" value="민들레"> <label
+													class="form-check-label">민들레</label>
+											</div>
+	
+											<div class="form-check form-check-inline">
+												<input name="allergy" class="form-check-input"
+													id='inlineCheckbox2' type="checkbox" value="계란흰자"> <label
+													class="form-check-label">계란흰자 </label>
+											</div>
+										</div>
+										<br>
+									</div>
+								</fieldset>
+								
+							</div>
+						</div>
+						<div class="form-group text-center">
+                        <button type="submit" id="join-submit" class="btn btn-primary">
+                          	  등록<i class="fa fa-check spaceLeft"></i>
+                        </button>
+                        <br>
+                        
+                    </div>
+                    <br>
+                    </div>​
+                    
+                </form>
+                <br>
+            </div>
+​			
+        </article>
+        <br>        
+     </div>
+	
+	</div>
+	
+	<footer id="sticky-footer" class="py-4 bg-light text-white-50">
+	
+	<div style="padding-left:20px;color:gray;">
+	<h3>Find Us</h3>
+	<hr color="gray">
+	<p><img id="footerimg" alt="location" src="img/pin.png">&nbsp;(SSAFY)서울시 강남구 테헤란로 멀티스퀘어</p>
+	<p><img id="footerimg" alt="phonenumber" src="img/mobile-phone.png">&nbsp;1544-9001</p>
+	<p><img id="footerimg" alt="email" src="img/mail.png"><a href="#">&nbsp;admin@ssafy.com</a></p>
+	
+	</div>
+    <div class="container text-center text-dark" style="max-width:100%;background-color:#D5D5D5;padding-top:10px;padding-bottom:10px;">
+      <small>Copyright &copy; by SSAFY All Rights Reserved</small>
+    </div>
+  </footer>
+     
+     
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <title>Hello, world!</title>
+  <style>
+    #test_btn1{
+            margin-right:-22px;
+    }
+    #test_btn2{
+        margin-left:-7px;
+    }
+    #navbarSupportedContent button{
+            border: 1px solid gray;
+            background-color: rgba(0,0,0,0);
+            color: white;
+            padding: 5px;
+        }
+	
+	body>div>div>div>ul ul { /*서브메뉴 선택시 서브메뉴화면  */
+	display: none;
+	background: white;
+	box-shadow: 1px 1px 5px black;
+	}
+	
+	#test_btn2:hover ul {
+	display: block;
+	position: relative;
+	}
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
+  <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+      <ul class="navbar-nav text-right">
+         <li><a href="#"><button id ="test_btn1">Sign up</button></a></li>
+         <li><a href="#"><button id ="test_btn2"><img src = "img/unlocked.png"> Login</button></a>
+              <ul>
+                <a href="#">상영작</a>
+				<a href="#">예정작</a>
+              </ul>
+         </li>
+      </ul>
+  </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<a class="navbar-brand" href="#"><img alt="ssafy" src="./img/header-logo.jpg"></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="#">공지사항</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">상품정보</a>
+    </li>
+   <li class="nav-item">
+      <a class="nav-link" href="#">베스트 섭취 정보</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">내 섭취 정보</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">예상 섭취 정보</a>
+    </li>
+  </ul>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" >Search</button>
+  </form>
+</div>
+</nav>
+<div class="jumbotron jumbotron-fluid">
+<div class="container text-center">
+  <h1>WHAT WE PROVIDE</h1>
+  <p>건강한 삶을 위한 먹거리 프로젝트</p>
+</div>
+</div>
+<div class="container-fluid bg-3 text-center">
+</div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

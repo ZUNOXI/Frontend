@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Menu Example</title>
+<style type="text/css">
+nav{
+	border : 1px solid #000;
+}
+ul{
+	list-style: none;
+	margin: 0; padding: 0;
+}
+ul > li{
+	float: left;
+	display: block;
+}
+ul:after{
+	content : '';
+	clear : both;
+	display : block;
+}
+ul  li  a{
+	padding : 5px 15px;
+	text-decoration: none;
+	background: #1e7c9a;
+	color : #fff;
+	display: block;
+}
+ul  li  a:hover{
+	background : #3b3b3b;
+}
+ul  ul{
+	display : none;
+}
+ul li:hover ul{
+	display : block;
+	position : absolute;
+}
+li:hover li{
+	float : none;
+}
+</style>
+<body>
+	<br/>
+	<h1>uefa champions league</h1>
+	<nav>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">UEPA</a>
+				<ul>
+					<li><a href="#">EPL</a></li>
+					<li><a href="#">Laliga</a></li>
+					<li><a href="#">Bundesliga</a></li>
+					<li><a href="#">SeriaA</a></li>
+				</ul></li>
+			<li><a href="#">Hot</a>
+				<ul>
+					<li><a href="#">Messi</a></li>
+					<li><a href="#">Reus</a></li>
+					<li><a href="#">Son</a></li>
+					<li><a href="#">Neymar</a></li>
+					<li><a href="#">Sancho</a></li>
+				</ul></li>
+			<li><a href="#">Transfer</a>
+				<ul>
+					<li><a href="#">Hot</a></li>
+					<li><a href="#">Big</a></li>
+					<li><a href="#">Small</a></li>
+				</ul></li>
+		</ul>
+		
+	</nav>
+	
+</body>
+</html>

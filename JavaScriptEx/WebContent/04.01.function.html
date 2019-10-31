@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script>
+function test(){
+	document.write("aaaaa");	
+}
+test();  
+
+a(); // 자바 스크립트는 호출부가 선언부보다 앞에 있어도 된다!
+function a(){
+	console.log("a()");
+}
+//b();
+var b = function(){  // 이름 안주고 만든 함수는 호출부가 선언부보다 앞에 있을 시 에러가 난다!! (변수 안에 함수를 집어 넣을 수 도 없다)
+	console.log("b()");  // 변수는 안에 데이터가 들어갈때 값이 결정된다!
+}
+b();
+console.log(b);
+ 
+a.c = function(){  // 함수 안에 또 함수를 집어 넣을 수 있다!!
+	console.log("c()");
+}
+console.log(a);
+
+
+///a();
+//b();
+a.c();  // var를 사용하지 않으면 전역변수로 설정해 주는 것이다.
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
